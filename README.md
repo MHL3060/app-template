@@ -7,5 +7,5 @@ spring security 3.2
 Hibernate and Hibernate search
 
 
-mvn hibernate3:hbm:ddl
-mvn dbunit:operator
+*mvn hibernate3:hbm2ddl
+*mvn dbunit:operator
