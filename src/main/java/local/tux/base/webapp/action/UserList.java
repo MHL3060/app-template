@@ -1,9 +1,10 @@
 package local.tux.base.webapp.action;
 
-import org.appfuse.dao.SearchException;
 
 import java.io.Serializable;
 import java.util.List;
+
+import org.hibernate.search.SearchException;
 
 public class UserList extends BasePage implements Serializable {
     private static final long serialVersionUID = 972359310602744018L;
