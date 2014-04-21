@@ -8,5 +8,6 @@
     <session-factory>
         <mapping class="local.tux.core.model.User"/>
         <mapping class="local.tux.core.model.Role"/>
+        <mapping class="local.tux.core.model.field.FieldProperty"/>
     </session-factory>
 </hibernate-configuration>

@@ -11,21 +11,22 @@
     </h:head>
     <h:body>
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="100" header="Top" resizable="true" closable="false" collapsible="false">
+            <p:layoutUnit position="north" size="100" resizable="true" closable="false" collapsible="false">
                 <h:outputText value="Top unit content." />
+                <ui:include src="/common/menu.xhtml" />
             </p:layoutUnit>
 
-            <p:layoutUnit position="south" size="100" header="Bottom" resizable="true" closable="false" collapsible="true">
+            <p:layoutUnit position="south" size="100"  resizable="true" closable="false" collapsible="true">
                 <h:outputText value="South unit content." />
             </p:layoutUnit>
 
-            <p:layoutUnit position="west" size="200" header="Left" resizable="true" closable="false" collapsible="true">
+            <p:layoutUnit position="west" size="200"  resizable="true" closable="fas" collapsible="true">
                 <!-- <h:form>
                     <ui:include src="../templates/themeMenu.xhtml" />
                 </h:form> -->
             </p:layoutUnit>
 
-            <p:layoutUnit position="east" size="200" header="Right" resizable="true" closable="true" collapsible="true" effect="drop">
+            <p:layoutUnit position="east" size="200" resizable="true" closable="true" collapsible="true" effect="drop">
                 <h:outputText value="Right unit content." />
             </p:layoutUnit>
 
