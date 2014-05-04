@@ -9,5 +9,6 @@
         <mapping class="local.tux.core.model.User"/>
         <mapping class="local.tux.core.model.Role"/>
         <mapping class="local.tux.core.model.field.FieldProperty"/>
+        <mapping class="local.tux.core.model.Menu" />
     </session-factory>
 </hibernate-configuration>

@@ -8,18 +8,7 @@
 
 	<h:form>
 
-		<p:outputPanel id="menuPanel" layout="block">
-			<p:tabMenu >
-				
-					<p:menuitem value="Page 1" url="#" />
-					<p:menuitem value="Page 2" url="#" />
-				
-					<p:menuitem value="Page 3" url="#" />
-					<p:menuitem value="Page 4" url="#" />
-				
-
-			</p:tabMenu>
-		</p:outputPanel>
+		<p:menubar model="#{menuBean.model}" style="z-index:1000 !important"/>
 
 	</h:form>
 </ui:composition>

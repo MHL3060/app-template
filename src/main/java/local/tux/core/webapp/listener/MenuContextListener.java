@@ -1,19 +1,29 @@
 package local.tux.core.webapp.listener;
 
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.ActionEvent;
-import javax.faces.event.ActionListener;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.ServletRequestEvent;
+import javax.servlet.ServletRequestListener;
 
-import org.springframework.web.context.support.WebApplicationObjectSupport;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
-public class MenuContextListener implements ActionListener {
+public class MenuContextListener implements ServletRequestListener {
+
+	Log log = LogFactory.getLog(MenuContextListener.class);
+	
+
+	
 
 	@Override
-	public void processAction(ActionEvent arg0) throws AbortProcessingException {
+	public void requestDestroyed(ServletRequestEvent servletRequestEvent) {
+		log.info(servletRequestEvent.getServletContext());
 		
+	}
+
+	@Override
+	public void requestInitialized(ServletRequestEvent servletRequestEvent) {
+		// TODO Auto-generated method stub
 		
 	}
 

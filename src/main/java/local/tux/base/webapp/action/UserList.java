@@ -4,6 +4,8 @@ package local.tux.base.webapp.action;
 import java.io.Serializable;
 import java.util.List;
 
+import local.tux.core.model.User;
+
 import org.hibernate.search.SearchException;
 
 public class UserList extends BasePage implements Serializable {
@@ -23,7 +25,7 @@ public class UserList extends BasePage implements Serializable {
         setSortColumn("username");
     }
 
-    public List getUsers() {
+    public List<User> getUsers() {
         try {
             return sort(userManager.search(query));
         } catch (SearchException se) {
