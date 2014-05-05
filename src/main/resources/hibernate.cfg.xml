@@ -1,14 +1,17 @@
-<!-- NOTE: If you're working offline, you might have to change the DOCTYPE to the following:
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+<!-- NOTE: If you're working offline, you might have to change the DOCTYPE 
+	to the following: <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate 
+	Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> -->
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-    <session-factory>
-        <mapping class="local.tux.core.model.User"/>
-        <mapping class="local.tux.core.model.Role"/>
-        <mapping class="local.tux.core.model.field.FieldProperty"/>
-        <mapping class="local.tux.core.model.Menu" />
-    </session-factory>
+	<session-factory>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		<mapping class="local.tux.core.model.User" />
+		<mapping class="local.tux.core.model.Role" />
+		<mapping class="local.tux.core.model.field.FieldProperty" />
+		<mapping class="local.tux.core.model.Menu" />
+	</session-factory>
 </hibernate-configuration>

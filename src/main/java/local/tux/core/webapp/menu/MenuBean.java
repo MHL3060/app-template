@@ -3,12 +3,15 @@ package local.tux.core.webapp.menu;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
+import local.tux.core.dao.MenuDao;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.primefaces.model.menu.DefaultMenuItem;
 import org.primefaces.model.menu.DefaultMenuModel;
 import org.primefaces.model.menu.DefaultSubMenu;
 import org.primefaces.model.menu.MenuModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @ManagedBean
@@ -18,10 +21,14 @@ public class MenuBean {
 	private Log log = LogFactory.getLog(MenuBean.class);
 	private MenuModel model;
 
-	
+	private MenuDao menuDao;
+	@Autowired
+	public void setMenuDao(MenuDao menuDao){
+		this.menuDao = menuDao;
+	}
 	public MenuBean() {
 		model = new DefaultMenuModel();
-
+		//List<Menu> menuD
 		String user = FacesContext.getCurrentInstance().getExternalContext().getRemoteUser();
 		log.info(user);
 		// First submenu

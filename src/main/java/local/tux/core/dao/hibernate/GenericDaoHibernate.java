@@ -19,6 +19,8 @@ import javax.annotation.Resource;
 
 import local.tux.core.dao.GenericDao;
 import local.tux.core.exception.SearchException;
+import local.tux.core.model.Role;
+import local.tux.core.model.User;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -221,6 +223,13 @@ public class GenericDaoHibernate<T, PK extends Serializable> implements GenericD
      */
     public void reindexAll(boolean async) {
         HibernateSearchTools.reindexAll(async, getSessionFactory().getCurrentSession());
+    }
+    public List<String> getRoleNames(User user){
+    	List<String> result = new ArrayList<String>();
+    	for (Role r : user.getRoles()){
+    		result.add(r.getName());
+    	}
+    	return result;
     }
 }
 

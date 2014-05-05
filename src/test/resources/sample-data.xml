@@ -119,4 +119,56 @@
             <value description="role_id">-2</value>
         </row>
     </table>
+    <table name="menu">
+    	<column>id</column>
+    	<column>label</column>
+    	<column>url</column>
+    	<column>icon_url</column>
+    	<row>
+    		<value description="id">1</value>
+    		<value description="label">menu1</value>
+    		
+    		<value description="url">aaaa</value>
+    		<value description="icon_url">icon_url</value>
+    	</row>
+    	
+    	<row>
+    		<value description="id">3</value>
+    		<value description="label">menu2</value>
+    		<value description="url">aaaa</value>
+    		<value description="icon_url">icon_url</value>
+    	</row>
+    	<row>
+    		<value description="id">4</value>
+    		<value description="label">menu1</value>
+    		<value description="url">aaaa</value>
+    		<value description="icon_url">icon_url</value>
+    	</row>
+    </table>
+    <table name="menu">
+    	<column>id</column>
+    	<column>label</column>
+    	<column>parent_id</column>
+    	<column>url</column>
+    	<column>icon_url</column>
+    	<row>
+    		<value description="id">2</value>
+    		<value description="label">menu_sub</value>
+    		<value description="parent_id">1</value>
+    		<value description="url">aaaa</value>
+    		<value description="icon_url">icon_url</value>
+    	</row>
+    </table>
+    <table name="menu_role">
+    	<column>menu_id</column>
+    	<column>roles_id</column>
+    	<row>
+    		<value descrdescription="menu_id">1</value>
+    		<value descrdescription="roles_id">-1</value>
+    	</row>
+    	<row>
+    		<value descrdescription="menu_id">2</value>
+    		<value descrdescription="roles_id">-2</value>
+    	</row>
+    </table>
 </dataset>
