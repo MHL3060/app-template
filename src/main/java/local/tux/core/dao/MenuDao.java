@@ -7,6 +7,6 @@ import local.tux.core.model.User;
 
 public interface MenuDao extends GenericDao<Menu, Long>{
 
-	public List<Menu> getMenu(User user);
+	public List<Menu> getTopMenu(User user);
 	
 }

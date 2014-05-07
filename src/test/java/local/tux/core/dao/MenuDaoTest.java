@@ -42,7 +42,7 @@ public class MenuDaoTest extends BaseDaoTestCase{
 	@Test
 	public void testGetMenu(){
 		user = userDao.get(-1l);
-		List<Menu> menues = menuDao.getMenu(user);
+		List<Menu> menues = menuDao.getTopMenu(user);
 		assertEquals(menues.size() ,1);
 	}
 	@Test
@@ -53,7 +53,7 @@ public class MenuDaoTest extends BaseDaoTestCase{
 			user.addRole(r);
 		}
 		userDao.save(user);
-		List<Menu> menues = menuDao.getMenu(user);
+		List<Menu> menues = menuDao.getTopMenu(user);
 		assertEquals(menues.size() ,2);
 	}
 }

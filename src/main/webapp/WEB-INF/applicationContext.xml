@@ -10,7 +10,8 @@
 
     <!-- Activates scanning of @Repository and @Service -->
     <context:component-scan base-package="local.tux"/>
-
+	<!-- Override the default password-encoder (BCrypt) by uncommenting the following and changing the class -->
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <!-- Add new DAOs here -->
 
     <!-- Add new Managers here -->

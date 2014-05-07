@@ -28,7 +28,7 @@ public class PasswordTokenManagerImpl implements PasswordTokenManager {
    private final SimpleDateFormat expirationTimeFormat = new SimpleDateFormat("yyyyMMddHHmm");
    private final int expirationTimeTokenLength = expirationTimeFormat.toPattern().length();
 
-   @Qualifier("passwordTokenEncoder")
+   @Qualifier("passwordEncoder")
    @Autowired
    private PasswordEncoder passwordTokenEncoder;
 

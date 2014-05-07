@@ -5,6 +5,7 @@ import org.apache.commons.collections.comparators.ReverseComparator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 
 import com.ocpsoft.shade.org.apache.commons.beanutils.BeanComparator;
@@ -43,7 +44,7 @@ public class BasePage {
     public FacesContext getFacesContext() {
         return FacesContext.getCurrentInstance();
     }
-
+    @Autowired
     public void setUserManager(UserManager userManager) {
         this.userManager = userManager;
     }

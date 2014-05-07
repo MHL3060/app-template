@@ -39,6 +39,8 @@ public class Menu implements BaseObject<Long>{
 	@ManyToOne
 	@JoinColumn(name="parent_id")
 	private Menu parent;
+	@Column(name="sort_order")
+	private Integer sortOrder;
 	
 	public Long getId() {
 		return id;
@@ -84,6 +86,13 @@ public class Menu implements BaseObject<Long>{
 	}
 	public void setParent(Menu parent) {
 		this.parent = parent;
+	}
+	
+	public Integer getSortOrder() {
+		return sortOrder;
+	}
+	public void setSortOrder(Integer sortOrder) {
+		this.sortOrder = sortOrder;
 	}
 	@Override
 	public int hashCode() {

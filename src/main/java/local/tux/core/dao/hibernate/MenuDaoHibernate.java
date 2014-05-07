@@ -18,13 +18,14 @@ public class MenuDaoHibernate extends GenericDaoHibernate<Menu, Long> implements
 		
 	}
 	@Override
-	public List<Menu> getMenu(User user) {
+	public List<Menu> getTopMenu(User user) {
 		
 		@SuppressWarnings("unchecked")
 		List<Menu> result = getSession().createCriteria(Menu.class, "menu")
 						.createCriteria("menu.roles", "role")
 						.add(Restrictions.in("role.name", getRoleNames(user)))
-						.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
+						.add(Restrictions.isNull("menu.parent"))
+						//.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
 						.list();
 		return result;			
 	}

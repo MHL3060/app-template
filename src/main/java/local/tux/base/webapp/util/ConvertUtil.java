@@ -16,12 +16,6 @@ import java.util.ResourceBundle;
 
 import local.tux.core.model.LabelValue;
 
-
-/**
- * Utility class to convert one object to another.
- *
- * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
- */
 public final class ConvertUtil {
     private static final Log log = LogFactory.getLog(ConvertUtil.class);
 
