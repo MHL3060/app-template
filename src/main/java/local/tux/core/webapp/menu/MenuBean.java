@@ -88,6 +88,7 @@ public class MenuBean extends BasePage{
 	}
 	private void addMenu(DefaultSubMenu item, Collection<Menu> menus){
 		for (Menu m : menus){
+			
 			DefaultMenuItem mi = new DefaultMenuItem(m.getLabel());
 			mi.setUrl(m.getUrl());
 			item.addElement(mi);

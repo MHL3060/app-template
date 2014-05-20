@@ -1,5 +1,6 @@
 package local.tux.core.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Column;
@@ -13,6 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.primefaces.model.menu.Submenu;
 
 @Entity
 @Table(name="menu")
@@ -35,7 +38,7 @@ public class Menu implements BaseObject<Long>{
 	@ManyToMany
 	private Collection<Role> roles;
 	@OneToMany(mappedBy="parent", fetch=FetchType.EAGER)
-	private Collection<Menu> subMenus;
+	private Collection<Menu> subMenus = new ArrayList<Menu>();
 	@ManyToOne
 	@JoinColumn(name="parent_id")
 	private Menu parent;

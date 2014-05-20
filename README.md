@@ -8,4 +8,4 @@ Hibernate and Hibernate search
 
 
 *mvn hibernate3:hbm2ddl
-*mvn dbunit:operator
+*mvn dbunit:operation
